@@ -105,7 +105,7 @@ large-scale recommendation systems. By employing this algorithm, the project aim
 accurate, relevant, and personalized recommendations to enhance the user experience and
 engagement on the e-commerce platform.
 
-###Data Pipeline in Spark Workflow
+### Data Pipeline in Spark Workflow
 When training out the ALS model, I also used a pipeline, which further streamlined my
 approach. Basically, the pipeline is utilized to streamline the process of training the ALS
 (Alternating Least Squares) model and making predictions on the testing set. A pipeline in Spark
