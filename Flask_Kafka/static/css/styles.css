@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: url('../images/111.gif') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh; 
+}
+
+body.result {
+  background: url('../images/321.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body.register {
+  background: url('../images/home.gif') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.content {
+  margin-top: 100px; /* Adjust as needed */
+}
+
+
+.footer {
+  position: fixed;
+bottom: 0;
+right: 0;
+margin: 10px;
+font-size: 14px;
+background-color: #333;
+padding: 10px;
+border: 1px solid #555;
+border-radius: 5px;
+color: #fff;
+margin-right: 20px;
+margin-bottom: 20px;
+}
+
+.title {
+  text-align: center;
+  color: #ffffff; /* White color */
+  padding: 20px 0;
+}
+.large-label {
+  font-size: 1.5em; /* Adjust as needed */
+  color: black;
+}
+
+.form-container {
+  width: 300px; /* Adjust width as needed */
+  margin: 0 auto; /* Center the form */
+}
+
+nav {
+  background-color: #232f3e;
+  text-align: center;
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+th {
+  background-color: #232f3e;
+  color: white;
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #232f3e;
+  padding: 10px 20px;
+  color: white;
+}
+
+header .search-bar {
+  flex-grow: 1;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 5px 10px;
+}
+
+
+
+.auth {
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+  
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+
+.login, .register {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.logo-image {
+  width: 150px;
+  height: auto;
+}
+
+.cart-image {
+  width: 40px; 
+  height: auto; 
+}
+
+input, button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #232f3e;
+  color: white;
+  cursor: pointer;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <title>Result Page</title>
+</head>
+<body class="result">
+  <header>
+    <div class="logo">
+      <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="logo-image">
+    </div>
+    <h1 class="title">FAST RECOMMENDATION SYSTEM</h1>
+    <div class="cart">
+      <img src="{{ url_for('static', filename='images/123.png') }}" alt="Cart" class="cart-image">
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/result">Result</a></li>
+      <li><a href="{{ url_for('register') }}">Register</a></li>
+    </ul>
+  </nav>
+
+  <div class="footer">
+    Developed By : Muhammad Haziq , Hashim, Hamza
+  </div>
+  <main>
+    <section>
+      <h1>Result Page</h1>
+      <div id="result">
+        <div class="form-container">
+          <form>
+            <label for="reviewer-id" class="large-label">Enter your reviewer ID:</label>
+            <input type="number" id="reviewer-id" name="reviewer-id" required>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  <script>
+    const source = new EventSource("/stream");
+    source.onmessage = function(event) {
+      const recommendation = JSON.parse(event.data);
+      
+      // Get the element where you want to display the recommendation
+      const resultDiv = document.querySelector('#result');
+  
+      // Clear the existing content
+      resultDiv.innerHTML = '';
+  
+      // Display the top 5 ASINs if available
+      if (recommendation.top_5_asin) {
+        const table = document.createElement('table');
+        const thead = document.createElement('thead');
+        const tbody = document.createElement('tbody');
+        const headerRow = document.createElement('tr');
+        const header = document.createElement('th');
+        header.textContent = "ASIN Index";
+        headerRow.appendChild(header);
+        thead.appendChild(headerRow);
+        table.appendChild(thead);
+  
+        recommendation.top_5_asin.forEach(asin => {
+          const row = document.createElement('tr');
+          const cell = document.createElement('td');
+          cell.textContent = asin.asin_index;
+          row.appendChild(cell);
+          tbody.appendChild(row);
+        });
+  
+        table.appendChild(tbody);
+        resultDiv.appendChild(table);
+      }
+    };
+  </script>
+  
+</body>
+</html>

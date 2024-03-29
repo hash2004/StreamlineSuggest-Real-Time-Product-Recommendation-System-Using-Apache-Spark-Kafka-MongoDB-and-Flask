@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <title>Register</title>
+</head>
+<body class="register">
+  <div class="content"></div>
+  <header>
+    <div class="logo">
+      <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo"  class="logo-image" >
+    </div>
+    <h1 class="title">FAST RECOMMENDATION SYSTEM</h1>
+    <div class="cart">
+      <img src="{{ url_for('static', filename='images/123.png') }}" alt="Cart"  class="cart-image" >
+    </div>
+  </header>
+  
+  <main>
+    <div class="hero"></div>
+    <section class="auth">
+      <div class="register">
+        <h2>Popular 5 asin's</h2>
+        <form>
+          <ul>
+            <li>43012</li>
+            <li>69420</li>
+            <li>13376</li>
+            <li>26921</li>
+            <li>69696</li>
+          </ul>
+          <button>Register</button>
+        </form>
+        <p>Already have an account? <a href="{{ url_for('home') }}">Log In</a></p>
+      </div>
+    </section>
+  </main>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

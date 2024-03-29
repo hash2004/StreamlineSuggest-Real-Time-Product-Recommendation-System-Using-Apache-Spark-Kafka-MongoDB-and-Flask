@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <title>FAST RECOMMENDATION SYSTEM</title>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo"  class="logo-image" >
+    </div>
+    <h1 class="title">FAST RECOMMENDATION SYSTEM</h1>
+    <div class="cart">
+      <img src="{{ url_for('static', filename='images/123.png') }}" alt="Cart"  class="cart-image" >
+    </div>
+  </header>
+
+  <main>  
+    <div class="hero"></div>
+    <section class="auth">
+      <div class="login">
+        <h2>Login</h2>
+        <form action="{{ url_for('result') }}" method="post">
+          <input type="email" placeholder="Email" id="email" name="email">
+          <input type="password" placeholder="Password" id="password" name="password">
+          <button type="submit" onclick="login()">Login</button>
+        </form>
+        <p>Don't have an id? <a href="{{ url_for('register') }}">Sign Up</a></p>
+      </div>
+    </section>
+  </main>
+  <div class="footer">
+    Developed By : Muhammad Haziq , Hashim, Hamza
+  </div>
+ <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
