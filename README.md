@@ -161,3 +161,6 @@ JSON serialization. The Producer then sends the top 5 ASINs to the Kafka topic (
 produce function. Upon successful delivery, the delivery_report function is called to handle the
 delivery status of the message.
 
+## License
+This project is licensed under the [MIT License](https://opensource.org/license/MIT)- see the LICENSE file for details.
+
